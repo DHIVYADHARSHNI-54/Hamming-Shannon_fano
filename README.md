@@ -50,20 +50,15 @@ print(f"Redudancy is : {red}")
 print(f"Variance is : {var}")
 
 ```
-# Calculation:
-```
+# Calculation
 
 ![WhatsApp Image 2025-09-01 at 12 33 13_a5dc81da](https://github.com/user-attachments/assets/17ddac48-1f60-4992-b789-681f5465a5a7)
 ![WhatsApp Image 2025-09-01 at 12 33 11_1388be16](https://github.com/user-attachments/assets/8ee3cd3e-b2a3-4bc3-8cff-d302c090fd6b)
 
-
-
-
-```
 # Output
-```
+
 
 ![image](https://github.com/user-attachments/assets/38be31cf-18e4-4dfe-86bf-9da261cb469d)
-``` 
+
 # Results:
 Thus the huffman coding is verified and analysed successfully.
