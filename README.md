@@ -5,19 +5,65 @@ Apply the Huffman and Shannon-Fano to this source.
 Show that by drawing the tree diagram, and 
 Calculate the average code word length, entropy, variance, redundancy, and efficiency.
 # Tools Required:
+
+Colab software in pc installed 
 # Program:
 ```
-Write the program 
+#Huffman and Shannon-Fano coding
+import numpy as np
+import math 
+L  = 0
+hs = 0
+p = []
+lk = []
+n = int(input("Enter the number of Samples : "))
+for i in range (n): 
+    pr = float(input(f"Enter the probability of sample values {i + 1}: "))  
+    p.append(pr)
+for j in range (n): 
+    l = float(input(f"Enter the length of the sample values {j + 1}: "))  
+    lk.append(l)
+# Avg length of the code word
+for k in range (n):
+    Avg1 = p[k] * lk[k]
+    L = L + Avg1
+# Entropy
+for k in range (n):
+    e = p[k] * math.log(1 / p[k], 2)
+    hs = hs + e
+hs = round(hs,3)
+# Efficiency
+eff =  hs / L
+eff = round(eff,3)
+# Redundancy 
+red =  round(1 - eff,3) 
+# Variance
+var = 0
+for k in range(n):
+    var1 = p[k] * (lk[k]-L)**2
+    var = var + var1
+var = round(var,3)
+print(f"Average Codeword Length is : {L}")
+print(f"Entropy is : {hs}")
+print(f"Efficiency is : {eff}")
+print(f"Redudancy is : {red}")
+print(f"Variance is : {var}")
+
 ```
 # Calculation:
 ```
-Compare the manually calculated value and the observed practical value.
+
+![WhatsApp Image 2025-09-01 at 12 33 13_a5dc81da](https://github.com/user-attachments/assets/17ddac48-1f60-4992-b789-681f5465a5a7)
+![WhatsApp Image 2025-09-01 at 12 33 11_1388be16](https://github.com/user-attachments/assets/8ee3cd3e-b2a3-4bc3-8cff-d302c090fd6b)
+
+
+
+
 ```
 # Output
 ```
-Attach the Output waveform
+
+![image](https://github.com/user-attachments/assets/38be31cf-18e4-4dfe-86bf-9da261cb469d)
 ``` 
 # Results:
-```
-Write the conclusion
-```
+Thus the huffman coding is verified and analysed successfully.
